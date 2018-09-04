@@ -1,4 +1,13 @@
 #!/bin/bash
 # scan the ip address
 
-nmap -O $1
+if [ $# = 1 ];then
+    nmap -O $1
+else
+cat <<EOF
+    Usage:
+    $0 ip
+    nmap -O ip
+EOF
+
+fi
