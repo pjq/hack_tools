@@ -1,5 +1,4 @@
 #!/bin/bash
-# Author:pengjianqing@gmail.com 2018/9/3
 # The script is used to monitor the IP address activities, and find out which process start it.
 
 LOG_DIR="/var/log/monitor_network"
