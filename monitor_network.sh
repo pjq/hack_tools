@@ -52,6 +52,8 @@ echo "More details: tail -f ${LOG}"
 echo "************************"
 while [ $i -le 1000000 ]
 do 
+    DATE=`date +%Y-%m-%d`
+    LOG="${LOG_DIR}/${DATE}.log"
     echo "`date` check network status: ${i}, sleep ${SLEEP} seconds" 
     echo "`date` check network status: ${i}" >>${LOG}
     check_network_status 
