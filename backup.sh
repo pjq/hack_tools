@@ -1,5 +1,5 @@
 #!/bin/bash
-#Author: pengjianqing@gmail.com
+#Author: pengjianqing@gmail.com, 2019/03/07
 #Script used to backup files directorys
 #Update your backup directorys at the end of the script
 #backup_directory "/var/www/dokuwiki/wiki"
