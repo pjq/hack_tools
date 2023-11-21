@@ -7,7 +7,7 @@
 
 BACKUP_DEST_PATH="/mnt/backup_ssf"
 BACKUP_DATE=`date +%y%m%d%H%M`
-BACKUP_MAX_COUNT=8
+BACKUP_MAX_COUNT=3
 
 # create the backup directory
 BACKUP_TARGET_PATH=${BACKUP_DEST_PATH}/${BACKUP_DATE}
@@ -21,7 +21,7 @@ function clean_up {
 
     if [ ${remove_count} -gt 0 ];then
         echo "Clean up..."
-        for i in `ls ${BACKUP_DEST_PATH} -t|grep -v "lost"|tail -n ${remove_count}`
+        for i in `ls ${BACKUP_DEST_PATH} -t|grep -v "lost"|grep -v "chitchat"|grep -v "dalle"|tail -n ${remove_count}`
         do
            echo "rm -rf ${BACKUP_DEST_PATH}/${i}"
            rm -rf ${BACKUP_DEST_PATH}/${i}
@@ -49,4 +49,5 @@ function backup_directory {
 clean_up 
 backup_directory "/var/www/dokuwiki/wiki"
 backup_directory "/var/www/wordpress"
+backup_directory "/etc"
 

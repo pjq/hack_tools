@@ -9,7 +9,7 @@ NETSTAT="${LOG_DIR}/netstat.log"
 FILTER_LOG="${LOG_DIR}/filter.log"
 FILTER="193.169.252.233|43.240"
 FILTER="193.169.252.233|193.169"
-SLEEP=10
+SLEEP=300
 
 function dump_info {
      FILTER_RESULT="$1"
